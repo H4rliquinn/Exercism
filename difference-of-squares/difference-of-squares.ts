@@ -14,8 +14,3 @@ export default class Squares{
         }
     }
 }
-
-// const squares = new Squares(5);
-// console.log(squares.squareOfSum);
-// console.log(squares.sumOfSquares);
-// console.log(squares.difference);
