@@ -1,24 +1,21 @@
-class Squares{
-    private sum=0;
-    private sqares=0;
-    private diff=0;
+export default class Squares{
+    public squareOfSum:number=0;
+    public sumOfSquares:number=0;
+    public difference:number=0;
 
     constructor(private num:number=0){
         if (num>0){
             for (let x=1;x<=num;x++){
-                console.log(x);
+                this.squareOfSum+=x;
+                this.sumOfSquares+=x**2;
             }
+            this.squareOfSum=this.squareOfSum**2;
+            this.difference=this.squareOfSum-this.sumOfSquares;
         }
-    }
-    squareOfSum(){
-
-    }
-    sumOfSquares(){
-
-    }
-    difference(){
-
     }
 }
 
-const squares = new Squares(5);
+// const squares = new Squares(5);
+// console.log(squares.squareOfSum);
+// console.log(squares.sumOfSquares);
+// console.log(squares.difference);
