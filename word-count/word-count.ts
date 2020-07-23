@@ -3,16 +3,14 @@ export default class Words{
         let wordArray:string[]=phrase.split(' ');
         let retVal:any={};
         for (let x in wordArray){
-            console.log("WORD:",wordArray[x]);
-            if (wordArray[x] in retVal){
-                retVal[wordArray[x]]+=1;
+            // console.log("WORD:",wordArray[x]);
+            let currWord:string=wordArray[x].toLowerCase();
+            if (currWord in retVal){
+                retVal[currWord]+=1;
             } else {
-                retVal[wordArray[x]]=1;
+                retVal[currWord]=1;
             }
         }
         return new Map(Object.entries(retVal))
    } 
 }
-
-// let wrd=new Words();
-// wrd.count('thing one');
