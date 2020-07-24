@@ -5,15 +5,15 @@ describe('Armstrong Numbers', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(5)).toBeTruthy()
   })
 
-  xit('There are no 2 digit Armstrong numbers', () => {
+  it('There are no 2 digit Armstrong numbers', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(10)).toBeFalsy()
   })
 
-  xit('Three digit number that is an Armstrong number', () => {
+  it('Three digit number that is an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(153)).toBeTruthy()
   })
 
-  xit('Three digit number that is not an Armstrong number', () => {
+  it('Three digit number that is not an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(100)).toBeFalsy()
   })
 
