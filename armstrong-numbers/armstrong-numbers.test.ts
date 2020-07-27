@@ -17,19 +17,19 @@ describe('Armstrong Numbers', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(100)).toBeFalsy()
   })
 
-  xit('Four digit number that is an Armstrong number', () => {
+  it('Four digit number that is an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(9474)).toBeTruthy()
   })
 
-  xit('Four digit number that is not an Armstrong number', () => {
+  it('Four digit number that is not an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(9475)).toBeFalsy()
   })
 
-  xit('Seven digit number that is an Armstrong number', () => {
+  it('Seven digit number that is an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(9926315)).toBeTruthy()
   })
 
-  xit('Seven digit number that is not an Armstrong number', () => {
+  it('Seven digit number that is not an Armstrong number', () => {
     expect(ArmstrongNumbers.isArmstrongNumber(9926314)).toBeFalsy()
   })
 })
