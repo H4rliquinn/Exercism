@@ -16,7 +16,7 @@ describe("run-length encode a string", () => {
     expect(RunLengthEncoding.encode("AABBBCCCC")).toEqual(expected)
   })
 
-  xit("single characters mixed with repeated characters", () => {
+  it("single characters mixed with repeated characters", () => {
     const expected = "12WB12W3B24WB"
     expect(
       RunLengthEncoding.encode(
@@ -25,12 +25,12 @@ describe("run-length encode a string", () => {
     ).toEqual(expected)
   })
 
-  xit("multiple whitespace mixed in string", () => {
+  it("multiple whitespace mixed in string", () => {
     const expected = "2 hs2q q2w2 "
     expect(RunLengthEncoding.encode("  hsqq qww  ")).toEqual(expected)
   })
 
-  xit("lowercase characters", () => {
+  it("lowercase characters", () => {
     const expected = "2a3b4c"
     expect(RunLengthEncoding.encode("aabbbcccc")).toEqual(expected)
   })
@@ -42,7 +42,7 @@ describe("run-length decode a string", () => {
     expect(RunLengthEncoding.decode("")).toEqual(expected)
   })
 
-  it("single characters only", () => {
+  xit("single characters only", () => {
     const expected = "XYZ"
     expect(RunLengthEncoding.decode("XYZ")).toEqual(expected)
   })
