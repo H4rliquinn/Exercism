@@ -52,12 +52,12 @@ describe("run-length decode a string", () => {
     expect(RunLengthEncoding.decode("2A3B4C")).toEqual(expected)
   })
 
-  xit("single characters with repeated characters", () => {
+  it("single characters with repeated characters", () => {
     const expected = "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
     expect(RunLengthEncoding.decode("12WB12W3B24WB")).toEqual(expected)
   })
 
-  xit("multiple whitespace mixed in string", () => {
+  it("multiple whitespace mixed in string", () => {
     const expected = "  hsqq qww  "
     expect(RunLengthEncoding.decode("2 hs2q q2w2 ")).toEqual(expected)
   })

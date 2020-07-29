@@ -40,7 +40,7 @@ class RunLengthEncoding{
             return str;
         }
 
-        let newStr:string[]=str.match(/\d*[A-Za-z]/g)||[];
+        let newStr:string[]=str.match(/\d*[A-Za-z\s]/g)||[];
         let retVal:string='';
 
         for (let x=0;x<newStr.length;x++){
