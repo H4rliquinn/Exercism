@@ -42,12 +42,12 @@ describe("run-length decode a string", () => {
     expect(RunLengthEncoding.decode("")).toEqual(expected)
   })
 
-  xit("single characters only", () => {
+  it("single characters only", () => {
     const expected = "XYZ"
     expect(RunLengthEncoding.decode("XYZ")).toEqual(expected)
   })
 
-  xit("string with no single characters", () => {
+  it("string with no single characters", () => {
     const expected = "AABBBCCCC"
     expect(RunLengthEncoding.decode("2A3B4C")).toEqual(expected)
   })

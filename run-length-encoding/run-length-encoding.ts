@@ -25,7 +25,7 @@ class RunLengthEncoding{
                 currCount=1;
             }
         }
-        
+
         if (currCount>1){
             retVal+=currCount+current;
         } else {
@@ -40,7 +40,24 @@ class RunLengthEncoding{
             return str;
         }
 
-        return str;        
+        let newStr:string[]=str.match(/\d*[A-Za-z]/g)||[];
+        let retVal:string='';
+
+        for (let x=0;x<newStr.length;x++){
+            let mult:number=1;
+            let char:string='';
+            console.log("X:"+ newStr[x]);
+            if (newStr[x].length>1){
+                mult=parseInt(newStr[x].slice(0,parseInt(newStr[x])-1));
+                char=newStr[x].slice(-1);
+            } else {
+                char=newStr[x];
+            }
+            console.log(mult+" "+char);
+            retVal+=char.repeat(mult);
+        }
+
+        return retVal;        
     }
 }
 
