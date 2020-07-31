@@ -7,6 +7,11 @@ export class ResistorColor {
     this.colors = colors;
   }
   value = (): number => {
-    return parseInt(this.lookup[this.colors[0]]+this.lookup[this.colors[1]]);
+    if (this.colors.length<2){
+        throw new Error("At least two colors need to be present");
+    } else{
+      return parseInt(this.lookup[this.colors[0]]+this.lookup[this.colors[1]]);
+    }
+
   }
 }
