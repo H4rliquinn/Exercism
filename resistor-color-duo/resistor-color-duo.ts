@@ -4,14 +4,13 @@ export class ResistorColor {
       green:"5",blue:"6",violet:"7",grey:"8",white:"9"};
 
   constructor(colors: string[]) {
-    this.colors = colors;
+    if (colors.length<2){
+      throw "At least two colors need to be present";
+    } else{
+      this.colors = colors;
+    }
   }
   value = (): number => {
-    if (this.colors.length<2){
-        throw new Error("At least two colors need to be present");
-    } else{
       return parseInt(this.lookup[this.colors[0]]+this.lookup[this.colors[1]]);
-    }
-
   }
 }
