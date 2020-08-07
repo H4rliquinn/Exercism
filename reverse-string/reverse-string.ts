@@ -1,6 +1,12 @@
 class ReverseString {
-    static reverse( /* Parameters go here */ ) {
-        // Your code here
+    static reverse( item:String ):string {
+        let retVal:string="";
+
+        for (let x in item){
+            retVal=item[x]+retVal;
+        }
+
+        return retVal;
     }
 }
 
