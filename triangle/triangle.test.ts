@@ -6,22 +6,22 @@ describe("Triangle", () => {
     expect(triangle.kind()).toEqual("equilateral")
   })
 
-  xit("larger equilateral triangles also have equal sides", () => {
+  it("larger equilateral triangles also have equal sides", () => {
     const triangle = new Triangle(10, 10, 10)
     expect(triangle.kind()).toEqual("equilateral")
   })
 
-  xit("isosceles triangles have last two sides equal", () => {
+  it("isosceles triangles have last two sides equal", () => {
     const triangle = new Triangle(3, 4, 4)
     expect(triangle.kind()).toEqual("isosceles")
   })
 
-  xit("isosceles trianges have first and last sides equal", () => {
+  it("isosceles trianges have first and last sides equal", () => {
     const triangle = new Triangle(4, 3, 4)
     expect(triangle.kind()).toEqual("isosceles")
   })
 
-  xit("isosceles triangles have two first sides equal", () => {
+  it("isosceles triangles have two first sides equal", () => {
     const triangle = new Triangle(4, 4, 3)
     expect(triangle.kind()).toEqual("isosceles")
   })
