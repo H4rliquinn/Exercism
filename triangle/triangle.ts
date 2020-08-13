@@ -17,9 +17,11 @@ export default class Triangle {
 
         if (a==b && b==c){
             return "equilateral";
-        } else if(a==b || b==c || a==c){
+        } else if (a==b || b==c || a==c){
             return "isosceles"
-        }else {
+        } else if ( a!=b && b!=c && a!=c){
+            return "scalene"
+        } else {
             return ""
         }
     }

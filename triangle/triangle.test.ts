@@ -26,27 +26,27 @@ describe("Triangle", () => {
     expect(triangle.kind()).toEqual("isosceles")
   })
 
-  xit("isosceles triangles have in fact exactly two sides equal", () => {
+  it("isosceles triangles have in fact exactly two sides equal", () => {
     const triangle = new Triangle(10, 10, 2)
     expect(triangle.kind()).toEqual("isosceles")
   })
 
-  xit("scalene triangles have no equal sides", () => {
+  it("scalene triangles have no equal sides", () => {
     const triangle = new Triangle(3, 4, 5)
     expect(triangle.kind()).toEqual("scalene")
   })
 
-  xit("scalene triangles have no equal sides at a larger scale too", () => {
+  it("scalene triangles have no equal sides at a larger scale too", () => {
     const triangle = new Triangle(10, 11, 12)
     expect(triangle.kind()).toEqual("scalene")
   })
 
-  xit("scalene triangles have no equal sides in descending order either", () => {
+  it("scalene triangles have no equal sides in descending order either", () => {
     const triangle = new Triangle(5, 4, 2)
     expect(triangle.kind()).toEqual("scalene")
   })
 
-  xit("very small triangles are legal", () => {
+  it("very small triangles are legal", () => {
     const triangle = new Triangle(0.4, 0.6, 0.3)
     expect(triangle.kind()).toEqual("scalene")
   })
