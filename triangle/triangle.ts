@@ -6,7 +6,19 @@ export default class Triangle {
         this.sides = sides
     }
 
-    kind() {
-        return ""
+    kind():string {
+        if (this.sides.length>3){
+            return "Error";
+        }
+        let a,b,c:number;
+        a=this.sides[0];
+        b=this.sides[1];
+        c=this.sides[2];
+
+        if (a==b && b==c){
+            return "equilateral";
+        } else {
+            return ""
+        }
     }
 }
