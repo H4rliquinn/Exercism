@@ -1,5 +1,4 @@
 export default class Triangle {
-
     sides: number[]
 
     constructor(...sides: number[]) {
@@ -7,8 +6,12 @@ export default class Triangle {
     }
 
     kind():string {
-        if (this.sides.length>3){
-            return "Error";
+        if (this.sides.length!=3){
+            throw "Invalid number of sides for a triangle";
+        } else if (this.sides[0]<=0||
+                    this.sides[1]<=0||
+                    this.sides[2]<=0){  
+            throw "All sides must be positive numbers";
         }
         let a,b,c:number;
         a=this.sides[0];
