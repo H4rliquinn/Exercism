@@ -16,12 +16,12 @@ describe("RotationalCipher", () => {
     expect(result).toEqual("a")
   })
 
-  xit("rotate m by 13", () => {
+  it("rotate m by 13", () => {
     const result = RotationalCipher.rotate("m", 13)
     expect(result).toEqual("z")
   })
 
-  xit("rotate n by 13 with wrap around alphabet", () => {
+  it("rotate n by 13 with wrap around alphabet", () => {
     const result = RotationalCipher.rotate("n", 13)
     expect(result).toEqual("a")
   })
