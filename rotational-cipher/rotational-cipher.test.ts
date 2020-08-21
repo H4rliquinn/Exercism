@@ -6,12 +6,12 @@ describe("RotationalCipher", () => {
     expect(result).toEqual("b")
   })
 
-  xit("rotate a by 26, same output as input", () => {
+  it("rotate a by 26, same output as input", () => {
     const result = RotationalCipher.rotate("a", 26)
     expect(result).toEqual("a")
   })
 
-  xit("rotate a by 0, same output as input", () => {
+  it("rotate a by 0, same output as input", () => {
     const result = RotationalCipher.rotate("a", 0)
     expect(result).toEqual("a")
   })
