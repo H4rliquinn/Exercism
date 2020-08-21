@@ -4,9 +4,8 @@ import { stringify } from "querystring";
 export default class RotationalCipher {
     public static rotate(org:string,rot:number):string{
         let retVal:string="";
-        for (let x=0;x<org.length;x++){
-            // .fromCharCode();
-            retVal+=org.charCodeAt(x)+rot;
+        for (let x=0;x<org.length;x++){    
+            retVal+=String.fromCharCode(org.charCodeAt(x)+rot);
         }
         return retVal;
     }
