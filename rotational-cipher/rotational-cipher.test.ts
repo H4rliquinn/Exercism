@@ -26,27 +26,27 @@ describe("RotationalCipher", () => {
     expect(result).toEqual("a")
   })
 
-  xit("rotate capital letters", () => {
+  it("rotate capital letters", () => {
     const result = RotationalCipher.rotate("OMG", 5)
     expect(result).toEqual("TRL")
   })
 
-  xit("rotate spaces", () => {
+  it("rotate spaces", () => {
     const result = RotationalCipher.rotate("O M G", 5)
     expect(result).toEqual("T R L")
   })
 
-  xit("rotate numbers", () => {
+  it("rotate numbers", () => {
     const result = RotationalCipher.rotate("Testing 1 2 3 testing", 4)
     expect(result).toEqual("Xiwxmrk 1 2 3 xiwxmrk")
   })
 
-  xit("rotate punctuation", () => {
+  it("rotate punctuation", () => {
     const result = RotationalCipher.rotate("Let's eat, Grandma!", 21)
     expect(result).toEqual("Gzo'n zvo, Bmviyhv!")
   })
 
-  xit("rotate all letters", () => {
+  it("rotate all letters", () => {
     const result = RotationalCipher.rotate(
       "The quick brown fox jumps over the lazy dog.",
       13
