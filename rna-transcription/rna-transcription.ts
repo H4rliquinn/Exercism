@@ -11,6 +11,9 @@ class Transcriptor {
         }
 
         for(let char of dna){
+            if (!complements[char]){
+                throw new Error("Invalid input DNA.");
+            }
             retVal+=complements[char];
         }
 
