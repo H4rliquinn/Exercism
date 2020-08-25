@@ -1,6 +1,16 @@
+import { stringify } from "querystring";
+
 class Transcriptor {
-    toRna( /* Parameters go here */ ) {
-        // Your code here
+    toRna( dna:string ):string {
+        let retVal:string="";
+        let complements:Record<string,string>={
+            'G':'C',
+            'C':'G',
+            'T':'A',
+            'A':'U'
+        }
+
+        return retVal;
     }
 }
 
