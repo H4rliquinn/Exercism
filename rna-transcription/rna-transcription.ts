@@ -10,6 +10,10 @@ class Transcriptor {
             'A':'U'
         }
 
+        for(let char of dna){
+            retVal+=complements[char];
+        }
+
         return retVal;
     }
 }
