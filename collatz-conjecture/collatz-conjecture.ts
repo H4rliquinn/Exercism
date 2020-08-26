@@ -1,6 +1,13 @@
 class CollatzConjecture {
-    static steps( /* Parameters go here */ ) {
-        // Your code here
+    static steps( num:number ):number {
+        let curVal:number=num;
+        let count:number=0;
+
+        if (curVal<2){
+            return count;
+        }
+        
+        return count;
     }
 }
 
