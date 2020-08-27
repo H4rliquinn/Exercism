@@ -6,12 +6,12 @@ describe('CollatzConjecture', () => {
     expect(CollatzConjecture.steps(1)).toBe(expected)
   })
 
-  xit('divide if even', () => {
+  it('divide if even', () => {
     const expected = 4
     expect(CollatzConjecture.steps(16)).toBe(expected)
   })
 
-  xit('even and odd steps', () => {
+  it('even and odd steps', () => {
     const expected = 9
     expect(CollatzConjecture.steps(12)).toBe(expected)
   })

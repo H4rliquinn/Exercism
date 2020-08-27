@@ -7,6 +7,15 @@ class CollatzConjecture {
             return count;
         }
         
+        while (curVal!=1){
+            if (curVal%2==0){
+                curVal/=2;
+            } else {
+                curVal=(curVal*3)+1;
+            }
+            count++;
+        }
+
         return count;
     }
 }
