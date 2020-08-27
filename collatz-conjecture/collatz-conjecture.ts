@@ -1,9 +1,13 @@
+import { cursorTo } from "readline";
+
 class CollatzConjecture {
     static steps( num:number ):number {
         let curVal:number=num;
         let count:number=0;
 
-        if (curVal<2){
+        if (curVal<=0){
+            throw new Error("Only positive numbers are allowed")
+        }else if (curVal==1){
             return count;
         }
         
