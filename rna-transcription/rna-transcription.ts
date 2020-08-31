@@ -1,9 +1,12 @@
 import { stringify } from "querystring";
 
+type DNA = "G"|"C"|"T"|"A";
+type RNA = "C"|"G"|"A"|"U";
+
 class Transcriptor {
     toRna( dna:string ):string {
         let retVal:string="";
-        let complements:Record<string,string>={
+        let complements:Record<DNA,RNA>={
             'G':'C',
             'C':'G',
             'T':'A',
