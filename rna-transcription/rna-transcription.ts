@@ -14,10 +14,10 @@ class Transcriptor {
         }
 
         for(let char of dna){
-            if (!complements[char]){
+            if (!complements[char as DNA]){
                 throw new Error("Invalid input DNA.");
             }
-            retVal+=complements[char];
+            retVal+=complements[char as DNA];
         }
 
         return retVal;
