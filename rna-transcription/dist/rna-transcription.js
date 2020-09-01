@@ -1,5 +1,8 @@
 "use strict";
 exports.__esModule = true;
+function isDNA(a) {
+    return (a == "G" || a == "C" || a == "T" || a == "A");
+}
 var Transcriptor = /** @class */ (function () {
     function Transcriptor() {
     }
@@ -13,10 +16,12 @@ var Transcriptor = /** @class */ (function () {
         };
         for (var _i = 0, dna_1 = dna; _i < dna_1.length; _i++) {
             var char = dna_1[_i];
-            if (!complements[char]) {
+            if (isDNA(char)) {
+                retVal += complements[char];
+            }
+            else {
                 throw new Error("Invalid input DNA.");
             }
-            retVal += complements[char];
         }
         return retVal;
     };
