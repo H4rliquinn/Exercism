@@ -1,19 +1,19 @@
 "use strict";
 exports.__esModule = true;
+var complements = {
+    'G': 'C',
+    'C': 'G',
+    'T': 'A',
+    'A': 'U'
+};
 function isDNA(a) {
-    return (a == "G" || a == "C" || a == "T" || a == "A");
+    return (complements[a] !== undefined);
 }
 var Transcriptor = /** @class */ (function () {
     function Transcriptor() {
     }
     Transcriptor.prototype.toRna = function (dna) {
         var retVal = "";
-        var complements = {
-            'G': 'C',
-            'C': 'G',
-            'T': 'A',
-            'A': 'U'
-        };
         for (var _i = 0, dna_1 = dna; _i < dna_1.length; _i++) {
             var char = dna_1[_i];
             if (isDNA(char)) {

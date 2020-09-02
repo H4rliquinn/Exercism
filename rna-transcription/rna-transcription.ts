@@ -3,20 +3,21 @@ import { stringify } from "querystring";
 type DNA = "G"|"C"|"T"|"A";
 type RNA = "C"|"G"|"A"|"U";
 
+let complements:Record<DNA,RNA>={
+    'G':'C',
+    'C':'G',
+    'T':'A',
+    'A':'U'
+}
+
 function isDNA(a:string):a is DNA{
-    return (a=="G"||a=="C"||a=="T"||a=="A")
+    return (complements[a as DNA]!==undefined)
 }
 
 
 class Transcriptor {
     toRna( dna:string ):string {
         let retVal:string="";
-        let complements:Record<DNA,RNA>={
-            'G':'C',
-            'C':'G',
-            'T':'A',
-            'A':'U'
-        }
 
         for(let char of dna){
             if (isDNA(char)){
