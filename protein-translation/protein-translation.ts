@@ -1,3 +1,5 @@
+import { compileFunction } from "vm";
+
 type CODON = "AUG"|"UUU"|"UUC"|"UUA"|"UUG"|"UCU"|"UCC"|"UCA"|
 "UCG"|"UAU"|"UAC"|"UGU"|"UGC"|"UGG"|"UAA"|"UAG"|"UGA";
 
@@ -13,6 +15,7 @@ let complements:Record<CODON,string>={
 }
 
 function isCODON(a:string):a is CODON{
+    // console.log(a,complements[a as CODON]);
     return (complements[a as CODON]!==undefined)
 }
 
@@ -23,9 +26,14 @@ class ProteinTranslation {
         let retVal:string[]=[];
 
         for(let x=0;x<rna.length;x=x+3){
-            let aa=rna.substr(x,x+3);
+            // console.log("LOOP",x,x+3,rna.substr(x,3));
+            let aa=rna.substr(x,3);
             if (isCODON(aa)){
-                retVal.push(complements[aa]);
+                if (complements[aa]!="STOP"){
+                    retVal.push(complements[aa]);
+                } else {
+                    break;
+                }
             } else {
                 throw new Error("Invalid input DNA.");  
             }
