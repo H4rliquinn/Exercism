@@ -91,27 +91,27 @@ describe("Translate input RNA sequences into proteins", () => {
     expect(ProteinTranslation.proteins("AUGUUUUGG")).toEqual(expected)
   })
 
-  xit("Translation stops if STOP codon at beginning of sequence", () => {
+  it("Translation stops if STOP codon at beginning of sequence", () => {
     const expected: string[] = []
     expect(ProteinTranslation.proteins("UAGUGG")).toEqual(expected)
   })
 
-  xit("Translation stops if STOP codon at end of two-codon sequence", () => {
+  it("Translation stops if STOP codon at end of two-codon sequence", () => {
     const expected = ["Tryptophan"]
     expect(ProteinTranslation.proteins("UGGUAG")).toEqual(expected)
   })
 
-  xit("Translation stops if STOP codon at end of three-codon sequence", () => {
+  it("Translation stops if STOP codon at end of three-codon sequence", () => {
     const expected = ["Methionine", "Phenylalanine"]
     expect(ProteinTranslation.proteins("AUGUUUUAA")).toEqual(expected)
   })
 
-  xit("Translation stops if STOP codon in middle of three-codon sequence", () => {
+  it("Translation stops if STOP codon in middle of three-codon sequence", () => {
     const expected = ["Tryptophan"]
     expect(ProteinTranslation.proteins("UGGUAGUGG")).toEqual(expected)
   })
 
-  xit("Translation stops if STOP codon in middle of six-codon sequence", () => {
+  it("Translation stops if STOP codon in middle of six-codon sequence", () => {
     const expected = ["Tryptophan", "Cysteine", "Tyrosine"]
     expect(ProteinTranslation.proteins("UGGUGUUAUUAAUGGUUU")).toEqual(expected)
   })
