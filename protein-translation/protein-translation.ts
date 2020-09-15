@@ -11,6 +11,11 @@ let complements:Record<CODON,String>={
     "UGG":"Tryptophan",
     "UAA":"STOP","UAG":"STOP","UGA":"STOP"
 }
+
+function isCODON(a:string):a is CODON{
+    return (complements[a as CODON]!==undefined)
+}
+
 class ProteinTranslation {
 
 
