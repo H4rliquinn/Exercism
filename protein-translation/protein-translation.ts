@@ -1,7 +1,7 @@
 type CODON = "AUG"|"UUU"|"UUC"|"UUA"|"UUG"|"UCU"|"UCC"|"UCA"|
 "UCG"|"UAU"|"UAC"|"UGU"|"UGC"|"UGG"|"UAA"|"UAG"|"UGA";
 
-let complements:Record<CODON,String>={
+let complements:Record<CODON,string>={
     "AUG":"Methionine",
     "UUU":"Phenylalanine","UUC":"Phenylalanine",
     "UUA":"Leucine","UUG":"Leucine",
@@ -18,9 +18,19 @@ function isCODON(a:string):a is CODON{
 
 class ProteinTranslation {
 
+    static proteins( rna:string ):string[] {
+        if (rna.length%3!=0){throw new Error("Invalid input RNA.")}
+        let retVal:string[]=[];
 
-    static proteins( /* Parameters go here */ ) {
-        // Your code here
+        for(let x=0;x<rna.length;x=x+3){
+            let aa=rna.substr(x,x+3);
+            if (isCODON(aa)){
+                retVal.push(complements[aa]);
+            } else {
+                throw new Error("Invalid input DNA.");  
+            }
+        }
+        return retVal;
     }
 }
 
