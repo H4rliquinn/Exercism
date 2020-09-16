@@ -1,9 +1,12 @@
 import { compileFunction } from "vm";
 
 type CODON = "AUG"|"UUU"|"UUC"|"UUA"|"UUG"|"UCU"|"UCC"|"UCA"|
-"UCG"|"UAU"|"UAC"|"UGU"|"UGC"|"UGG"|"UAA"|"UAG"|"UGA";
+    "UCG"|"UAU"|"UAC"|"UGU"|"UGC"|"UGG"|"UAA"|"UAG"|"UGA";
 
-let complements:Record<CODON,string>={
+type PPT = "Methionine"|"Phenylalanine"|"Leucine"|"Serine"|"Tyrosine"|
+    "Cysteine"|"Tryptophan"|"STOP";
+
+let complements:Record<CODON,PPT>={
     "AUG":"Methionine",
     "UUU":"Phenylalanine","UUC":"Phenylalanine",
     "UUA":"Leucine","UUG":"Leucine",
