@@ -1,33 +1,33 @@
 
 
 class SpaceAge{
-    age=0;
-    constructor(age:number){
-        this.age=age;
+    seconds=0;
+    constructor(seconds:number){
+        this.seconds=seconds;
     }
     onEarth():number{
-        return this.age;
+        return this.seconds;
     }
     onMercury():number{
-        return this.age;
+        return this.seconds;
     }
     onVenus():number{
-        return this.age;
+        return this.seconds;
     }
     onMars():number{
-        return this.age;
+        return this.seconds;
     }
     onJupiter():number{
-        return this.age;
+        return this.seconds;
     }
     onSaturn():number{
-        return this.age;
+        return this.seconds;
     }
     onUranus():number{
-        return this.age;
+        return this.seconds;
     }
     onNeptune():number{
-        return this.age;
+        return this.seconds;
     }
 }
 
