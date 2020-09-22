@@ -19,20 +19,20 @@ class Transcriptor {
     toRna( dna:string ):string {
         let retVal:string="";
 
-        for (let x of Object.keys(complements)){
-            let regX=new RegExp(x,"g");
-            console.log(x,regX);
-            dna=dna.replace(regX,complements[x as DNA])
-        }
-
-        // for(let char of dna){
-        //     if (isDNA(char)){
-        //         retVal+=complements[char];
-        //     } else {
-        //         throw new Error("Invalid input DNA.");  
-        //     }
+        // for (let x of Object.keys(complements)){
+        //     let regX=new RegExp(x,"g");
+        //     console.log(x,regX);
+        //     dna=dna.replace(regX,complements[x as DNA])
         // }
-        return dna;
+
+        for(let char of dna){
+            if (isDNA(char)){
+                retVal+=complements[char];
+            } else {
+                throw new Error("Invalid input DNA.");  
+            }
+        }
+        return retVal;
     }
 }
 
