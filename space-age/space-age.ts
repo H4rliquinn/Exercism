@@ -2,16 +2,15 @@ import { Agent } from "http";
 
 
 class SpaceAge{
-    seconds=0;
-    earthYear=31557600;
-    earthYearsInt=0;
+    seconds:number=0;
+    earthYears=0;
     constructor(seconds:number){
         this.seconds=seconds;
-        this.earthYearsInt=this.seconds/this.earthYear*100;
+        this.earthYears=this.seconds/3155760000;
     }
 
     computeSpaceAge(op:number):number{
-        return Math.round((this.earthYearsInt)/op)/100;
+        return Math.round((this.earthYears)/op)/100;
     }
 
     onEarth():number{
