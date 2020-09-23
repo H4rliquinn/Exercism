@@ -2,14 +2,16 @@
 
 class SpaceAge{
     seconds=0;
+    earthYear=31557600;
     constructor(seconds:number){
         this.seconds=seconds;
     }
     onEarth():number{
-        return this.seconds;
+        return Math.round((this.seconds/this.earthYear*100))/100;
     }
     onMercury():number{
-        return this.seconds;
+        
+        return Math.round((this.seconds/this.earthYear/0.2408467*100))/100;
     }
     onVenus():number{
         return this.seconds;
