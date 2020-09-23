@@ -18,26 +18,25 @@ class SpaceAge{
         return this.computeSpaceAge(1);
     }
     onMercury():number{
-        
         return this.computeSpaceAge(0.2408467);
     }
     onVenus():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(0.61519726);
     }
     onMars():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(1.8808158);
     }
     onJupiter():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(11.862615);
     }
     onSaturn():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(29.447498);
     }
     onUranus():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(84.016846);
     }
     onNeptune():number{
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(164.79132);
     }
 }
 
