@@ -1,3 +1,4 @@
+import { Agent } from "http";
 
 
 class SpaceAge{
@@ -8,12 +9,17 @@ class SpaceAge{
         this.seconds=seconds;
         this.earthYearsInt=this.seconds/this.earthYear*100;
     }
+
+    computeSpaceAge(op:number):number{
+        return Math.round((this.earthYearsInt)/op)/100;
+    }
+
     onEarth():number{
-        return Math.round((this.earthYearsInt))/100;
+        return this.computeSpaceAge(1);
     }
     onMercury():number{
         
-        return Math.round((this.earthYearsInt/0.2408467))/100;
+        return this.computeSpaceAge(0.2408467);
     }
     onVenus():number{
         return Math.round((this.earthYearsInt/0.2408467))/100;
