@@ -1,6 +1,6 @@
 class SpaceAge{
-    seconds:number=0;
-    earthYears=0;
+    seconds:number;
+    earthYears:number;
     constructor(seconds:number){
         this.seconds=seconds;
         this.earthYears=this.seconds/31557600;
